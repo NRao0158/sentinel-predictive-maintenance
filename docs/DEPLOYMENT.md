@@ -1,5 +1,7 @@
 # Deployment
 
+Public demo: https://nihal-sentinel.streamlit.app/ . Deployed from `main/app.py` on Streamlit Community Cloud with Python 3.12; startup and prediction studio verified in the browser on October 6, 2026.
+
 ## Local
 
 Follow README setup and run `python -m streamlit run app.py`. Default URL: http://localhost:8501. No raw data needed. Models were trained with Python 3.12 and the pinned requirements.

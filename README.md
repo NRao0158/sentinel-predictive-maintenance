@@ -1,5 +1,7 @@
 # Sentinel — Equipment Failure Prediction
 
+[Live prediction demo](https://nihal-sentinel.streamlit.app/) · [GitHub repository](https://github.com/NRao0158/sentinel-predictive-maintenance)
+
 An independent machine-learning portfolio project: predict failure within **30 operating cycles** and estimate remaining useful life from sensor history. Includes a Streamlit prediction studio, historical replay, batch inference, validation evidence, and a simulated alert lifecycle.
 
 **Scope:** NASA C-MAPSS FD001 simulated turbofan engines. Inspired by logistics equipment maintenance, but not trained or validated on printers, scanners, or facility telemetry. No production integrations, live alerts, measured cost savings, or claimed internship experience.
