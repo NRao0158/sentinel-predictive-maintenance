@@ -1,0 +1,412 @@
+{
+  "dataset": "NASA C-MAPSS FD001 (simulated turbofan engines)",
+  "horizon": 30,
+  "selected": "logistic",
+  "regressor": "gradient_boosting",
+  "threshold": 0.13,
+  "validation_pr_auc": {
+    "prevalence": 0.14295925661186562,
+    "logistic": 0.9401635868243217,
+    "gradient_boosting": 0.9332129069969703
+  },
+  "validation_rul_mae": {
+    "median": 35.13319037407672,
+    "gradient_boosting": 12.466763848409558
+  },
+  "official_test": {
+    "prevalence": {
+      "pr_auc": 0.25,
+      "roc_auc": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "brier": 0.19812161599333614,
+      "false_positives": 0,
+      "missed_failures": 25,
+      "observations": 100
+    },
+    "logistic": {
+      "pr_auc": 0.948945817623237,
+      "roc_auc": 0.9792000000000001,
+      "precision": 0.875,
+      "recall": 0.84,
+      "f1": 0.8571428571428571,
+      "brier": 0.0576745825732411,
+      "false_positives": 3,
+      "missed_failures": 4,
+      "observations": 100
+    },
+    "gradient_boosting": {
+      "pr_auc": 0.9400872970241796,
+      "roc_auc": 0.9797333333333333,
+      "precision": 0.9,
+      "recall": 0.72,
+      "f1": 0.8,
+      "brier": 0.0672604081231481,
+      "false_positives": 2,
+      "missed_failures": 7,
+      "observations": 100
+    }
+  },
+  "official_test_rul": {
+    "median": {
+      "mae": 38.01,
+      "rmse": 49.20335354424533
+    },
+    "gradient_boosting": {
+      "mae": 12.88790709919528,
+      "rmse": 18.005104082725925
+    }
+  },
+  "internal_audit": {
+    "pr_auc": 0.9566081556149009,
+    "roc_auc": 0.9890724263298889,
+    "precision": 0.6885441527446301,
+    "recall": 0.9616666666666667,
+    "f1": 0.8025034770514604,
+    "brier": 0.026760824642958803,
+    "false_positives": 261,
+    "missed_failures": 23,
+    "observations": 4084
+  },
+  "audit_pr_auc_95_interval": [
+    0.9318042234279144,
+    0.9774260615346722
+  ],
+  "splits": {
+    "train": [
+      60,
+      22,
+      57,
+      19,
+      34,
+      43,
+      51,
+      28,
+      93,
+      72,
+      3,
+      26,
+      25,
+      53,
+      82,
+      100,
+      52,
+      62,
+      5,
+      98,
+      95,
+      38,
+      29,
+      81,
+      8,
+      58,
+      80,
+      27,
+      77,
+      79,
+      39,
+      1,
+      87,
+      47,
+      11,
+      30,
+      71,
+      46,
+      18,
+      40,
+      92,
+      41,
+      90,
+      6,
+      69,
+      2,
+      96,
+      85,
+      64,
+      4,
+      84,
+      94,
+      21,
+      88,
+      44,
+      74,
+      33,
+      76,
+      24,
+      97
+    ],
+    "validation": [
+      70,
+      16,
+      49,
+      56,
+      61,
+      10,
+      63,
+      32,
+      73,
+      17,
+      45,
+      83,
+      68,
+      35,
+      31,
+      59,
+      75,
+      89,
+      99,
+      55
+    ],
+    "audit": [
+      50,
+      7,
+      91,
+      12,
+      86,
+      42,
+      23,
+      20,
+      36,
+      65,
+      48,
+      13,
+      54,
+      15,
+      14,
+      67,
+      37,
+      66,
+      78,
+      9
+    ]
+  },
+  "features": [
+    "cycle",
+    "s2",
+    "s3",
+    "s4",
+    "s7",
+    "s8",
+    "s9",
+    "s11",
+    "s12",
+    "s13",
+    "s14",
+    "s15",
+    "s17",
+    "s20",
+    "s21",
+    "s2_mean10",
+    "s2_delta10",
+    "s3_mean10",
+    "s3_delta10",
+    "s4_mean10",
+    "s4_delta10",
+    "s7_mean10",
+    "s7_delta10",
+    "s8_mean10",
+    "s8_delta10",
+    "s9_mean10",
+    "s9_delta10",
+    "s11_mean10",
+    "s11_delta10",
+    "s12_mean10",
+    "s12_delta10",
+    "s13_mean10",
+    "s13_delta10",
+    "s14_mean10",
+    "s14_delta10",
+    "s15_mean10",
+    "s15_delta10",
+    "s17_mean10",
+    "s17_delta10",
+    "s20_mean10",
+    "s20_delta10",
+    "s21_mean10",
+    "s21_delta10"
+  ],
+  "global_importance": [
+    {
+      "feature": "s11_mean10",
+      "pr_auc_drop": 0.20751164484873752
+    },
+    {
+      "feature": "s9_mean10",
+      "pr_auc_drop": 0.1691813847105069
+    },
+    {
+      "feature": "s13_mean10",
+      "pr_auc_drop": 0.14250594013888807
+    },
+    {
+      "feature": "s8_mean10",
+      "pr_auc_drop": 0.13974974906564663
+    },
+    {
+      "feature": "s14_mean10",
+      "pr_auc_drop": 0.03737986608256775
+    },
+    {
+      "feature": "cycle",
+      "pr_auc_drop": 0.011316646858260873
+    },
+    {
+      "feature": "s20_mean10",
+      "pr_auc_drop": 0.0060426095890562985
+    },
+    {
+      "feature": "s21_mean10",
+      "pr_auc_drop": 0.005913076300878006
+    },
+    {
+      "feature": "s4_mean10",
+      "pr_auc_drop": 0.004777955177267497
+    },
+    {
+      "feature": "s8",
+      "pr_auc_drop": 0.004345471141043704
+    },
+    {
+      "feature": "s2_mean10",
+      "pr_auc_drop": 0.004064845969418844
+    },
+    {
+      "feature": "s11",
+      "pr_auc_drop": 0.003879505925960721
+    },
+    {
+      "feature": "s14_delta10",
+      "pr_auc_drop": 0.0034514221192259997
+    },
+    {
+      "feature": "s17_delta10",
+      "pr_auc_drop": 0.0026940923058850577
+    },
+    {
+      "feature": "s12_delta10",
+      "pr_auc_drop": 0.002375552150677455
+    },
+    {
+      "feature": "s20_delta10",
+      "pr_auc_drop": 0.001987753217868223
+    },
+    {
+      "feature": "s15_mean10",
+      "pr_auc_drop": 0.0014007734387365318
+    },
+    {
+      "feature": "s13_delta10",
+      "pr_auc_drop": 0.0013185807364510804
+    },
+    {
+      "feature": "s21_delta10",
+      "pr_auc_drop": 0.0012749151045149398
+    },
+    {
+      "feature": "s14",
+      "pr_auc_drop": 0.0012237983188719086
+    },
+    {
+      "feature": "s4_delta10",
+      "pr_auc_drop": 0.0011749984361903627
+    },
+    {
+      "feature": "s11_delta10",
+      "pr_auc_drop": 0.0010475251357237776
+    },
+    {
+      "feature": "s7_mean10",
+      "pr_auc_drop": 0.0008666595019579301
+    },
+    {
+      "feature": "s9_delta10",
+      "pr_auc_drop": 0.0008423157700137018
+    },
+    {
+      "feature": "s15",
+      "pr_auc_drop": 0.0007040240528179235
+    },
+    {
+      "feature": "s12",
+      "pr_auc_drop": 0.000651835604404775
+    },
+    {
+      "feature": "s4",
+      "pr_auc_drop": 0.0006487867241808942
+    },
+    {
+      "feature": "s7_delta10",
+      "pr_auc_drop": 0.0006415425284958346
+    },
+    {
+      "feature": "s15_delta10",
+      "pr_auc_drop": 0.0005787800448690353
+    },
+    {
+      "feature": "s8_delta10",
+      "pr_auc_drop": 0.00042653729768230936
+    },
+    {
+      "feature": "s2",
+      "pr_auc_drop": 0.0003801533074409373
+    },
+    {
+      "feature": "s3",
+      "pr_auc_drop": 0.0003309880108582168
+    },
+    {
+      "feature": "s13",
+      "pr_auc_drop": 0.0003118882578791264
+    },
+    {
+      "feature": "s12_mean10",
+      "pr_auc_drop": 0.00015516937300071495
+    },
+    {
+      "feature": "s2_delta10",
+      "pr_auc_drop": 0.00014088357365704685
+    },
+    {
+      "feature": "s21",
+      "pr_auc_drop": 0.00011477214654827723
+    },
+    {
+      "feature": "s3_delta10",
+      "pr_auc_drop": 9.704787923951279e-05
+    },
+    {
+      "feature": "s17_mean10",
+      "pr_auc_drop": 8.814210302221515e-05
+    },
+    {
+      "feature": "s3_mean10",
+      "pr_auc_drop": 7.656593703349776e-06
+    },
+    {
+      "feature": "s7",
+      "pr_auc_drop": -2.7782969778900046e-05
+    },
+    {
+      "feature": "s20",
+      "pr_auc_drop": -3.173434482010388e-05
+    },
+    {
+      "feature": "s17",
+      "pr_auc_drop": -8.351354833883533e-05
+    },
+    {
+      "feature": "s9",
+      "pr_auc_drop": -0.00018012139477278458
+    }
+  ],
+  "training_rows": 12250,
+  "timestamp": "2026-10-06T01:39:44.919761+00:00",
+  "sklearn": "1.9.1",
+  "python": "3.12.14",
+  "data_sha256": {
+    "RUL_FD001.txt": "a19c8ec94931949d0485bdc35118206e9c81c4547b422efb9cf86f4ceddbceca",
+    "test_FD001.txt": "3cda7109ce17bafb5443f2ac926cfcf88154b941b8c4cf95eb55d1ddd6f52851",
+    "train_FD001.txt": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8"
+  }
+}
